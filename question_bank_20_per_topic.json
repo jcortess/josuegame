@@ -1,0 +1,589 @@
+{
+  "levels": [
+    {
+      "name": "Daily Hero",
+      "boss": "Routine Monster",
+      "topic": "Daily Activities",
+      "questions": [
+        {
+          "prompt": "Choose the correct sentence",
+          "question": "I ____ my bed every morning.",
+          "options": [
+            "make",
+            "am making",
+            "made"
+          ],
+          "answer": "make",
+          "topic": "Daily Activities"
+        },
+        {
+          "prompt": "Choose the best answer",
+          "question": "She ____ does her homework after school.",
+          "options": [
+            "always",
+            "is",
+            "were"
+          ],
+          "answer": "always",
+          "topic": "Frequency"
+        },
+        {
+          "prompt": "Choose the correct sentence",
+          "question": "We ____ to school every day.",
+          "options": [
+            "go",
+            "are going",
+            "went"
+          ],
+          "answer": "go",
+          "topic": "Daily Activities"
+        },
+        {
+          "prompt": "Choose the correct word",
+          "question": "I ____ go to bed late on school days.",
+          "options": [
+            "never",
+            "am",
+            "was"
+          ],
+          "answer": "never",
+          "topic": "Frequency"
+        },
+        {
+          "prompt": "Special days vocabulary",
+          "question": "On birthdays we usually ____ presents.",
+          "options": [
+            "give",
+            "giving",
+            "gave"
+          ],
+          "answer": "give",
+          "topic": "Special Days"
+        },
+        {
+          "prompt": "Choose the correct sentence",
+          "question": "He ____ a pet every afternoon.",
+          "options": [
+            "feeds",
+            "is feeding",
+            "fed"
+          ],
+          "answer": "feeds",
+          "topic": "Daily Activities"
+        },
+        {
+          "prompt": "Choose the correct sentence",
+          "question": "They ____ their bags for school every night.",
+          "options": [
+            "pack",
+            "are packing",
+            "packed"
+          ],
+          "answer": "pack",
+          "topic": "Daily Activities"
+        },
+        {
+          "prompt": "Choose the correct word",
+          "question": "I ____ do my homework after dinner.",
+          "options": [
+            "usually",
+            "am",
+            "were"
+          ],
+          "answer": "usually",
+          "topic": "Frequency"
+        },
+        {
+          "prompt": "Choose the correct sentence",
+          "question": "My sister ____ home at three o'clock every day.",
+          "options": [
+            "goes",
+            "is going",
+            "went"
+          ],
+          "answer": "goes",
+          "topic": "Daily Activities"
+        },
+        {
+          "prompt": "Special days vocabulary",
+          "question": "We ____ fireworks on New Year's Eve.",
+          "options": [
+            "watch",
+            "watched",
+            "watching"
+          ],
+          "answer": "watch",
+          "topic": "Special Days"
+        }
+      ]
+    },
+    {
+      "name": "Time Master",
+      "boss": "Now vs Every Day",
+      "topic": "Present Tenses",
+      "questions": [
+        {
+          "prompt": "Choose the correct verb form",
+          "question": "I ____ my homework now.",
+          "options": [
+            "do",
+            "am doing",
+            "did"
+          ],
+          "answer": "am doing",
+          "topic": "Present Continuous"
+        },
+        {
+          "prompt": "Choose the correct verb form",
+          "question": "He ____ to school every day.",
+          "options": [
+            "go",
+            "goes",
+            "is going"
+          ],
+          "answer": "goes",
+          "topic": "Present Simple"
+        },
+        {
+          "prompt": "Choose the correct verb form",
+          "question": "They ____ lunch at the moment.",
+          "options": [
+            "eat",
+            "are eating",
+            "ate"
+          ],
+          "answer": "are eating",
+          "topic": "Present Continuous"
+        },
+        {
+          "prompt": "Choose the correct sentence",
+          "question": "She ____ her room every Saturday.",
+          "options": [
+            "cleans",
+            "is cleaning",
+            "clean"
+          ],
+          "answer": "cleans",
+          "topic": "Present Simple"
+        },
+        {
+          "prompt": "Choose the correct sentence",
+          "question": "We ____ TV right now.",
+          "options": [
+            "watch",
+            "are watching",
+            "watched"
+          ],
+          "answer": "are watching",
+          "topic": "Present Continuous"
+        },
+        {
+          "prompt": "Choose the correct verb form",
+          "question": "Dad ____ breakfast every morning.",
+          "options": [
+            "makes",
+            "is making",
+            "made"
+          ],
+          "answer": "makes",
+          "topic": "Present Simple"
+        },
+        {
+          "prompt": "Choose the correct verb form",
+          "question": "Look! The baby ____ .",
+          "options": [
+            "sleeps",
+            "is sleeping",
+            "slept"
+          ],
+          "answer": "is sleeping",
+          "topic": "Present Continuous"
+        },
+        {
+          "prompt": "Choose the correct sentence",
+          "question": "My friends ____ soccer on Fridays.",
+          "options": [
+            "play",
+            "are playing",
+            "played"
+          ],
+          "answer": "play",
+          "topic": "Present Simple"
+        },
+        {
+          "prompt": "Choose the correct sentence",
+          "question": "Right now, Ana ____ a book.",
+          "options": [
+            "reads",
+            "is reading",
+            "read"
+          ],
+          "answer": "is reading",
+          "topic": "Present Continuous"
+        },
+        {
+          "prompt": "Choose the correct sentence",
+          "question": "Our teacher ____ English on Mondays.",
+          "options": [
+            "teaches",
+            "is teaching",
+            "taught"
+          ],
+          "answer": "teaches",
+          "topic": "Present Simple"
+        }
+      ]
+    },
+    {
+      "name": "Past Explorer",
+      "boss": "Yesterday Dragon",
+      "topic": "Past Simple",
+      "questions": [
+        {
+          "prompt": "Choose the past simple form",
+          "question": "Yesterday I ____ to school.",
+          "options": [
+            "go",
+            "went",
+            "gone"
+          ],
+          "answer": "went",
+          "topic": "Past Simple"
+        },
+        {
+          "prompt": "Choose the past simple form",
+          "question": "Last night we ____ pizza.",
+          "options": [
+            "eat",
+            "ate",
+            "eated"
+          ],
+          "answer": "ate",
+          "topic": "Past Simple"
+        },
+        {
+          "prompt": "Choose the past simple form",
+          "question": "I ____ fun at the party.",
+          "options": [
+            "have",
+            "had",
+            "has"
+          ],
+          "answer": "had",
+          "topic": "Past Simple"
+        },
+        {
+          "prompt": "Choose the past simple form",
+          "question": "I ____ my friend in the park.",
+          "options": [
+            "saw",
+            "see",
+            "seed"
+          ],
+          "answer": "saw",
+          "topic": "Past Simple"
+        },
+        {
+          "prompt": "Choose the correct feeling",
+          "question": "Before an exam, many students feel ____.",
+          "options": [
+            "nervous",
+            "pizza",
+            "Tuesday"
+          ],
+          "answer": "nervous",
+          "topic": "Feelings"
+        },
+        {
+          "prompt": "Choose the past simple form",
+          "question": "Yesterday she ____ a letter to her grandma.",
+          "options": [
+            "wrote",
+            "write",
+            "writing"
+          ],
+          "answer": "wrote",
+          "topic": "Past Simple"
+        },
+        {
+          "prompt": "Choose the past simple form",
+          "question": "The baby ____ in 2018.",
+          "options": [
+            "was born",
+            "is born",
+            "born"
+          ],
+          "answer": "was born",
+          "topic": "Life Events"
+        },
+        {
+          "prompt": "Choose the past simple form",
+          "question": "They ____ married last year.",
+          "options": [
+            "got",
+            "get",
+            "getting"
+          ],
+          "answer": "got",
+          "topic": "Life Events"
+        },
+        {
+          "prompt": "Choose the past simple form",
+          "question": "My brother ____ school at age five.",
+          "options": [
+            "started",
+            "start",
+            "starting"
+          ],
+          "answer": "started",
+          "topic": "Life Events"
+        },
+        {
+          "prompt": "Choose the past simple form",
+          "question": "We ____ a movie yesterday.",
+          "options": [
+            "watched",
+            "watch",
+            "watching"
+          ],
+          "answer": "watched",
+          "topic": "Past Simple"
+        }
+      ]
+    },
+    {
+      "name": "Time Battle",
+      "boss": "When-While Wizard",
+      "topic": "Past Continuous",
+      "questions": [
+        {
+          "prompt": "Choose when or while",
+          "question": "I was sleeping ____ my mom called me.",
+          "options": [
+            "when",
+            "while",
+            "because"
+          ],
+          "answer": "when",
+          "topic": "When vs While"
+        },
+        {
+          "prompt": "Choose when or while",
+          "question": "____ I was playing, it started to rain.",
+          "options": [
+            "While",
+            "When",
+            "Yesterday"
+          ],
+          "answer": "While",
+          "topic": "When vs While"
+        },
+        {
+          "prompt": "Choose the correct form",
+          "question": "She ____ reading at seven o'clock.",
+          "options": [
+            "was",
+            "were",
+            "is"
+          ],
+          "answer": "was",
+          "topic": "Past Continuous"
+        },
+        {
+          "prompt": "Choose the correct form",
+          "question": "They ____ playing in the yard.",
+          "options": [
+            "was",
+            "were",
+            "are"
+          ],
+          "answer": "were",
+          "topic": "Past Continuous"
+        },
+        {
+          "prompt": "Choose the best answer",
+          "question": "A bear appeared while I ____ in the forest.",
+          "options": [
+            "was walking",
+            "walked",
+            "am walking"
+          ],
+          "answer": "was walking",
+          "topic": "When vs While"
+        },
+        {
+          "prompt": "Choose the correct form",
+          "question": "We ____ having lunch at noon.",
+          "options": [
+            "were",
+            "was",
+            "are"
+          ],
+          "answer": "were",
+          "topic": "Past Continuous"
+        },
+        {
+          "prompt": "Choose the correct form",
+          "question": "He ____ sleeping at 9:00 p.m.",
+          "options": [
+            "was",
+            "were",
+            "is"
+          ],
+          "answer": "was",
+          "topic": "Past Continuous"
+        },
+        {
+          "prompt": "Choose when or while",
+          "question": "I was brushing my teeth ____ the phone rang.",
+          "options": [
+            "when",
+            "while",
+            "tomorrow"
+          ],
+          "answer": "when",
+          "topic": "When vs While"
+        },
+        {
+          "prompt": "Choose when or while",
+          "question": "____ they were watching TV, the lights went out.",
+          "options": [
+            "While",
+            "When",
+            "Monday"
+          ],
+          "answer": "While",
+          "topic": "When vs While"
+        },
+        {
+          "prompt": "Choose the correct form",
+          "question": "The children ____ running in the park.",
+          "options": [
+            "were",
+            "was",
+            "are"
+          ],
+          "answer": "were",
+          "topic": "Past Continuous"
+        }
+      ]
+    },
+    {
+      "name": "Story Boss",
+      "boss": "Story Giant",
+      "topic": "Sequence Words",
+      "questions": [
+        {
+          "prompt": "Choose the best sequence word",
+          "question": "____, I woke up and brushed my teeth.",
+          "options": [
+            "First",
+            "Suddenly",
+            "In the end"
+          ],
+          "answer": "First",
+          "topic": "Sequence Words"
+        },
+        {
+          "prompt": "Choose the best sequence word",
+          "question": "I ate breakfast. ____, I went to school.",
+          "options": [
+            "Then",
+            "Yesterday",
+            "Blue"
+          ],
+          "answer": "Then",
+          "topic": "Sequence Words"
+        },
+        {
+          "prompt": "Choose the best sequence word",
+          "question": "I was walking home. ____, I saw a big dog!",
+          "options": [
+            "Suddenly",
+            "Always",
+            "Monday"
+          ],
+          "answer": "Suddenly",
+          "topic": "Sequence Words"
+        },
+        {
+          "prompt": "Choose the best sequence word",
+          "question": "____, I got home and went to sleep.",
+          "options": [
+            "In the end",
+            "Usually",
+            "Now"
+          ],
+          "answer": "In the end",
+          "topic": "Sequence Words"
+        },
+        {
+          "prompt": "Teacher question",
+          "question": "What's your name?",
+          "options": [
+            "My name is Josué.",
+            "I am from Costa Rica.",
+            "It is Monday."
+          ],
+          "answer": "My name is Josué.",
+          "topic": "Personal Questions"
+        },
+        {
+          "prompt": "Choose the best answer",
+          "question": "What day is it today?",
+          "options": [
+            "It is Monday.",
+            "My name is Ana.",
+            "I am from Panama."
+          ],
+          "answer": "It is Monday.",
+          "topic": "Personal Questions"
+        },
+        {
+          "prompt": "Choose the best answer",
+          "question": "What's the date?",
+          "options": [
+            "It's April 27th.",
+            "It is Friday.",
+            "I like April."
+          ],
+          "answer": "It's April 27th.",
+          "topic": "Personal Questions"
+        },
+        {
+          "prompt": "Choose the best answer",
+          "question": "When's your birthday?",
+          "options": [
+            "It's on November 21st.",
+            "It is Wednesday.",
+            "I am eight."
+          ],
+          "answer": "It's on November 21st.",
+          "topic": "Personal Questions"
+        },
+        {
+          "prompt": "Choose the best answer",
+          "question": "Where are you from?",
+          "options": [
+            "I'm from Costa Rica.",
+            "My name is Luis.",
+            "It is June."
+          ],
+          "answer": "I'm from Costa Rica.",
+          "topic": "Personal Questions"
+        },
+        {
+          "prompt": "Choose the best answer",
+          "question": "What do you usually do on your birthday?",
+          "options": [
+            "I have a party.",
+            "It is Friday.",
+            "I am from Peru."
+          ],
+          "answer": "I have a party.",
+          "topic": "Personal Questions"
+        }
+      ]
+    }
+  ]
+}
