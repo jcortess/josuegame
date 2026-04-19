@@ -11,50 +11,90 @@ export default class QuestionScene extends Phaser.Scene {
 
     create() {
         const data = this.cache.json.get('questions');
-
         const level = data.levels[gameState.levelIndex];
 
-        gameState.questions = Phaser.Utils.Array.Shuffle(level.questions).slice(0, 15);
-
+        //Cantidad de preguntas para pasar de nivel
+        gameState.questions = Phaser.Utils.Array.Shuffle(level.questions).slice(0, gameState.questionsPerLevel); //gameState.js
+        gameState.total = gameState.questions.length;
         this.currentQ = 0;
 
+        //Creación de heroe
         this.hero = this.add.circle(100, 500, 20, 0x00ff00);
+        this.hero.setDepth(100);
+        this.hero.setAlpha(0.6); //transparencia
+        this.hero.setBlendMode(Phaser.BlendModes.ADD);
+
+        this.targetHeroX = this.hero.x;
+        this.targetHeroY = this.hero.y;
+
+        this.input.on('pointermove', (pointer) => {
+            this.targetHeroX = Phaser.Math.Clamp(pointer.x, 20, this.scale.width - 20);
+            this.targetHeroY = Phaser.Math.Clamp(pointer.y, 20, this.scale.height - 20);
+        });
 
         this.monster = this.add.rectangle(800, 200, 100, 100, 0xff0000);
-        this.monsterText = this.add.text(750, 150, "Idle");
+        this.monster.setDepth(50);
+
+        this.monsterText = this.add.text(750, 150, 'Idle');
+        this.monsterText.setDepth(51);
+
+        this.questionText = null;
+        this.promptText = null;
+        this.optionTexts = [];
+        this.options = [];
+        this.isAnswering = false;
 
         this.createQuestion();
     }
 
     createQuestion() {
+        if (this.promptText) this.promptText.destroy();
+        if (this.questionText) this.questionText.destroy();
+
+        if (this.options && this.options.length) {
+            this.options.forEach(btn => btn.destroy());
+        }
+
+        if (this.optionTexts && this.optionTexts.length) {
+            this.optionTexts.forEach(txt => txt.destroy());
+        }
+
+        this.options = [];
+        this.optionTexts = [];
+
         const q = gameState.questions[this.currentQ];
 
-        this.add.text(100, 50, q.prompt);
-        this.add.text(100, 100, q.question);
+        this.promptText = this.add.text(100, 50, q.prompt).setDepth(10);
+        this.questionText = this.add.text(100, 100, q.question).setDepth(10);
 
         this.options = [];
 
         q.options.forEach((opt, i) => {
-            let btn = this.add.rectangle(200 + i * 200, 400, 150, 80, 0x3333ff)
-                .setInteractive()
+            const btn = this.add.rectangle(200 + i * 200, 400, 150, 80, 0x3333ff)
+                .setDepth(20)
+                .setInteractive({ useHandCursor: true })
                 .on('pointerdown', () => this.answer(opt));
 
-            this.add.text(180 + i * 200, 380, opt);
+            const txt = this.add.text(180 + i * 200, 380, opt).setDepth(21);
 
             this.options.push(btn);
+            this.optionTexts.push(txt);
         });
     }
 
     answer(option) {
+        if (this.isAnswering) return;
+            this.isAnswering = true;
+
         const q = gameState.questions[this.currentQ];
 
         if (option === q.answer) {
             gameState.score += 10;
             gameState.correct++;
-            this.monsterText.setText("HURT 😢");
+            this.monsterText.setText('HURT 😢');
         } else {
             gameState.lives--;
-            this.monsterText.setText("HAPPY 😈");
+            this.monsterText.setText('HAPPY 😈');
 
             gameState.mistakes.push({
                 question: q.question,
@@ -72,17 +112,25 @@ export default class QuestionScene extends Phaser.Scene {
 
     nextQuestion() {
         this.currentQ++;
+        this.isAnswering = false;
 
         if (this.currentQ >= gameState.questions.length) {
-            this.scene.start('LevelReportScene');
+            if (gameState.correct >= gameState.minCorrectToPass) {
+                this.scene.start('LevelReportScene');
+            } else {
+                gameState.correct = 0;
+                gameState.mistakes = [];
+                this.scene.start('LevelIntroScene'); // repetir nivel
+            }
         } else {
-            this.scene.restart();
+            this.createQuestion();
         }
     }
 
     update() {
-        this.input.on('pointermove', pointer => {
-            this.physics.moveTo(this.hero, pointer.x, pointer.y, 200);
-        });
+        if (!this.hero) return;
+
+        this.hero.x = Phaser.Math.Linear(this.hero.x, this.targetHeroX, 0.12);
+        this.hero.y = Phaser.Math.Linear(this.hero.y, this.targetHeroY, 0.12);
     }
 }
