@@ -7,6 +7,7 @@ export default class QuestionScene extends Phaser.Scene {
 
     preload() {
         this.load.json('questions', 'data/question_bank_20_per_topic.json');
+        this.load.image('hero', 'assets/hero.png');
     }
 
     create() {
@@ -19,17 +20,18 @@ export default class QuestionScene extends Phaser.Scene {
         this.currentQ = 0;
 
         //Creación de heroe
-        this.hero = this.add.circle(100, 500, 20, 0x00ff00);
+        this.hero = this.add.image(100, 500, 'hero');
+        this.hero.setDisplaySize(90, 90);
         this.hero.setDepth(100);
-        this.hero.setAlpha(0.6); //transparencia
+        this.hero.setAlpha(0.95); //transparencia
         this.hero.setBlendMode(Phaser.BlendModes.ADD);
 
         this.targetHeroX = this.hero.x;
         this.targetHeroY = this.hero.y;
 
         this.input.on('pointermove', (pointer) => {
-            this.targetHeroX = Phaser.Math.Clamp(pointer.x, 20, this.scale.width - 20);
-            this.targetHeroY = Phaser.Math.Clamp(pointer.y, 20, this.scale.height - 20);
+            this.targetHeroX = Phaser.Math.Clamp(pointer.x, 45, this.scale.width - 45);
+            this.targetHeroY = Phaser.Math.Clamp(pointer.y, 45, this.scale.height - 45);
         });
 
         this.monster = this.add.rectangle(800, 200, 100, 100, 0xff0000);
