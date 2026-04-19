@@ -8,6 +8,7 @@ export default class QuestionScene extends Phaser.Scene {
     preload() {
         this.load.json('questions', 'data/question_bank_20_per_topic.json');
         this.load.image('hero', 'assets/hero.png');
+        this.load.image('monster', 'assets/monster.png');
     }
 
     create() {
@@ -34,10 +35,16 @@ export default class QuestionScene extends Phaser.Scene {
             this.targetHeroY = Phaser.Math.Clamp(pointer.y, 45, this.scale.height - 45);
         });
 
-        this.monster = this.add.rectangle(800, 200, 100, 100, 0xff0000);
+        this.monster = this.add.image(840, 260, 'monster');
+        this.monster.setDisplaySize(260, 260);
         this.monster.setDepth(50);
 
-        this.monsterText = this.add.text(750, 150, 'Idle');
+        this.monsterText = this.add.text(760, 110, 'Idle', {
+            fontSize: '24px',
+            color: '#ffffff',
+            fontStyle: 'bold',
+            backgroundColor: '#000000'
+        });
         this.monsterText.setDepth(51);
 
         this.questionText = null;
