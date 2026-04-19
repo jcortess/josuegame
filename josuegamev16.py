@@ -19,7 +19,7 @@ import pygame
 WIDTH, HEIGHT = 1100, 720
 FPS = 60
 SAVE_FILE = "josue_pygame_save.json"
-QUESTIONS_PER_LEVEL = 1
+QUESTIONS_PER_LEVEL = 2
 
 WHITE = (255, 255, 255)
 BLACK = (20, 20, 20)
@@ -211,7 +211,7 @@ class EnglishAdventureGame:
         if self.question_index == 0:
             self.monster_max_hp = len(self.current_level_pool())
             self.monster_hp = len(self.current_level_pool())
-        self.monster_mood = "idle"
+        #self.monster_mood = "idle"
         options = self.current_question()["options"][:]
         random.shuffle(options)
         self.doors = []
@@ -514,10 +514,7 @@ class EnglishAdventureGame:
 
     def draw_monster(self, monster_name, x, y, scale=1.0):
         t = pygame.time.get_ticks() / 220.0
-        mood = self.monster_mood
-        if self.monster_effect_timer and pygame.time.get_ticks() > self.monster_effect_timer:
-            mood = "idle"
-            self.monster_mood = "idle"
+        mood = self.monster_mood        
 
         if mood == "hurt":
             bob = int(7 * __import__("math").sin(t * 3))
@@ -692,14 +689,16 @@ class EnglishAdventureGame:
 
         self.draw_text_center("Walk to a door and press ENTER or SPACE", self.font_s, GRAY, WIDTH // 2, 315)
         monster_name = "Story Giant" if self.boss_battle else self.levels[self.level_index]["boss"]
-        self.draw_monster(monster_name, 80, 315, 0.9)
+        #Posicion del mounstro
+        self.draw_monster(monster_name, 80, 620, 0.9)
 
         mood_text = {
             "idle": "Monster is waiting...",
             "hurt": "Monster is crying and losing power!",
             "happy": "Monster is smiling and gaining confidence!",
         }.get(self.monster_mood, "Monster is waiting...")
-        self.draw_text_center(mood_text, self.font_s, RED if self.monster_mood == "happy" else BLUE if self.monster_mood == "hurt" else GRAY, 250, 350)
+        #Posicion del texto del mounstro
+        self.draw_text_center(mood_text, self.font_s, RED if self.monster_mood == "happy" else BLUE if self.monster_mood == "hurt" else GRAY, 250, 620)
 
         for door in self.doors:
             color = BLUE
@@ -873,9 +872,9 @@ class EnglishAdventureGame:
                         self.scene = "menu"
 
     def update_monster_state(self):
-    if self.monster_effect_timer and pygame.time.get_ticks() > self.monster_effect_timer:
-        self.monster_mood = "idle"
-        self.monster_effect_timer = 0
+        if self.monster_effect_timer and pygame.time.get_ticks() > self.monster_effect_timer:
+            self.monster_mood = "idle"
+            self.monster_effect_timer = 0
 
     def draw(self):
         self.draw_background()
