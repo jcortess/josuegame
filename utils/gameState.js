@@ -8,5 +8,7 @@ export const gameState = {
     mistakes: [],
     weakTopics: {},
     timerEnabled: false,
-    questions: []
+    questions: [],
+    questionsPerLevel: 1,
+    minCorrectToPass: 1
 };
