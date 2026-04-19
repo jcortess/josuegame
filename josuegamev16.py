@@ -19,7 +19,7 @@ import pygame
 WIDTH, HEIGHT = 1100, 720
 FPS = 60
 SAVE_FILE = "josue_pygame_save.json"
-QUESTIONS_PER_LEVEL = 2
+QUESTIONS_PER_LEVEL = 10
 
 WHITE = (255, 255, 255)
 BLACK = (20, 20, 20)
